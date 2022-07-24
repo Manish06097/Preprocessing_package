@@ -210,7 +210,7 @@ def _remove_common_words(x,freq,n=20):
 	return ' '.join([t for t in x.split() if t not in f20])
 
 
-def _remove_rare_words(x,freq,=20):
+def _remove_rare_words(x,freq,n=20):
 	
 	fn = freq.tail(n)
 	return ' '.join([t for t in x.split() if t not in f20])
