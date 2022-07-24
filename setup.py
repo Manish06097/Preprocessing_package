@@ -12,7 +12,7 @@ version = '0.0.1',
 author="Manish Agarwal",description="This is preprocessing packages",
 author_email="manish060103@gmail.com",
 long_description=long_description,
-long_description_content_type='text/'
+long_description_content_type='text/',
 packages = setuptools.find_packages(),
 classifiers=[
 'Programming Language ::Python ::3',
