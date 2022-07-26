@@ -170,7 +170,9 @@ def _remove_rt(x):
 	return re.sub(r'\brt\b','',x).strip()
 
 def _remove_specialchar(x):
-	return ' '.join((re.sub(r'[^\w ]+', "", x)).strip())
+	x = re.sub(r'[^\w ]+', "", x)
+	x = ' '.join(x.split())
+	return x
 
 def _remove_htmltags(x):
 	return BeautifulSoup(x, 'lxml').get_text().strip()
@@ -207,13 +209,15 @@ def _value_counts(df,col):
 def _remove_common_words(x,freq,n=20):
 	
 	fn = freq[:n]
-	return ' '.join([t for t in x.split() if t not in f20])
+	x = ' '.join([t for t in x.split() if t not in fn])
+	return x
 
 
 def _remove_rare_words(x,freq,n=20):
 	
 	fn = freq.tail(n)
-	return ' '.join([t for t in x.split() if t not in f20])
+	x = ' '.join([t for t in x.split() if t not in fn])
+	return x
 
 
 def _spelling_correction(x):
