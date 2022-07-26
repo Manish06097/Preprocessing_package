@@ -8,7 +8,7 @@ with open('README.md','r') as file:
 setuptools.setup(
 
 	name='preprocessing_recro',
-version = '0.0.2',
+version = '0.0.3',
 author="Manish Agarwal",description="This is preprocessing packages",
 author_email="manish060103@gmail.com",
 long_description=long_description,

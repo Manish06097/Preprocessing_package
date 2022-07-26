@@ -170,7 +170,7 @@ def _remove_rt(x):
 	return re.sub(r'\brt\b','',x).strip()
 
 def _remove_specialchar(x):
-	return ' '.join(re.sub(r'[^\w ]+', "", x).strip())
+	return ' '.join((re.sub(r'[^\w ]+', "", x)).strip())
 
 def _remove_htmltags(x):
 	return BeautifulSoup(x, 'lxml').get_text().strip()
